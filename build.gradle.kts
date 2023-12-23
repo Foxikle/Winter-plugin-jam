@@ -5,8 +5,8 @@ plugins {
     id("net.kyori.blossom") version "2.1.0"
 }
 
-group = "me.name"
-version = "0.1.0"
+group = "me.foxikle"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
 }
 
 tasks {
