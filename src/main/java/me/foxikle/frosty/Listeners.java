@@ -63,8 +63,8 @@ public class Listeners implements Listener {
                     first = loc.clone().add(Math.sin(var) / 4, Math.sin(var) / 4 + .5, Math.cos(var) / 4);
                     second = loc.clone().add(Math.cos(var + Math.PI) / 4, Math.cos(var) / 4 + .5, Math.sin(var + Math.PI) / 4);
 
-                    loc.getWorld().spawnParticle(Particle.REDSTONE, first, 2, new Particle.DustOptions(firstColor, 1));
-                    loc.getWorld().spawnParticle(Particle.REDSTONE, second, 1, new Particle.DustOptions(secondColor, 1));
+                    loc.getWorld().spawnParticle(Particle.DUST, first, 2, new Particle.DustOptions(firstColor, 1));
+                    loc.getWorld().spawnParticle(Particle.DUST, second, 1, new Particle.DustOptions(secondColor, 1));
                 }
             }.runTaskTimer(plugin, 0, 1);
         }
@@ -196,7 +196,7 @@ public class Listeners implements Listener {
                 @Override
                 public void run() {
                     if (iterations >= 60) {
-                        e.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, e.getEyeLocation(), 1);
+                        e.getWorld().spawnParticle(Particle.EXPLOSION, e.getEyeLocation(), 1);
                         ItemDisplay display = e.getWorld().spawn(e.getEyeLocation(), ItemDisplay.class);
                         display.setBillboard(Display.Billboard.VERTICAL);
                         display.setItemDisplayTransform(ItemDisplay.ItemDisplayTransform.FIXED);
@@ -276,12 +276,12 @@ public class Listeners implements Listener {
                                 loc.getWorld().spawnParticle(Particle.FLAME, l5, 0, 0, 1, 0, 1);
                                 loc.getWorld().spawnParticle(Particle.FLAME, l6, 0, 0, 1, 0, 1);
 
-                                loc.getWorld().spawnParticle(Particle.REDSTONE, l1, 1, new Particle.DustOptions(Color.RED, 1));
-                                loc.getWorld().spawnParticle(Particle.REDSTONE, l2, 1, new Particle.DustOptions(Color.RED, 1));
-                                loc.getWorld().spawnParticle(Particle.REDSTONE, l3, 1, new Particle.DustOptions(Color.RED, 1));
-                                loc.getWorld().spawnParticle(Particle.REDSTONE, l4, 1, new Particle.DustOptions(Color.RED, 1));
-                                loc.getWorld().spawnParticle(Particle.REDSTONE, l5, 1, new Particle.DustOptions(Color.RED, 1));
-                                loc.getWorld().spawnParticle(Particle.REDSTONE, l6, 1, new Particle.DustOptions(Color.RED, 1));
+                                loc.getWorld().spawnParticle(Particle.DUST, l1, 1, new Particle.DustOptions(Color.RED, 1));
+                                loc.getWorld().spawnParticle(Particle.DUST, l2, 1, new Particle.DustOptions(Color.RED, 1));
+                                loc.getWorld().spawnParticle(Particle.DUST, l3, 1, new Particle.DustOptions(Color.RED, 1));
+                                loc.getWorld().spawnParticle(Particle.DUST, l4, 1, new Particle.DustOptions(Color.RED, 1));
+                                loc.getWorld().spawnParticle(Particle.DUST, l5, 1, new Particle.DustOptions(Color.RED, 1));
+                                loc.getWorld().spawnParticle(Particle.DUST, l6, 1, new Particle.DustOptions(Color.RED, 1));
 
                                 iterations++;
 
@@ -314,7 +314,7 @@ public class Listeners implements Listener {
                 @Override
                 public void run() {
                     if (iterations >= 60) {
-                        e.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, e.getEyeLocation(), 1);
+                        e.getWorld().spawnParticle(Particle.EXPLOSION, e.getEyeLocation(), 1);
                         ItemDisplay display = e.getWorld().spawn(e.getEyeLocation(), ItemDisplay.class);
                         display.setBillboard(Display.Billboard.VERTICAL);
                         display.setItemDisplayTransform(ItemDisplay.ItemDisplayTransform.FIXED);
